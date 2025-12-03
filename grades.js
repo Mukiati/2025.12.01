@@ -7,7 +7,7 @@ const secretkey = process.env.SECRET_KEY
 const expire = process.env.EXPIRES_IN
 
 const router = express.Router()
-module.exports = routerererere
+module.exports = router
 
 router.get('/grade',Auth(),async(req,res)=>{
     return res.json(await dbhandler.grade.findAll({where:{student_id:req.uid},attributes:['grade']}))
